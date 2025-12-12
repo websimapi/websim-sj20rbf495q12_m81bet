@@ -1,0 +1,9 @@
+// ... existing code ...
+        // integrate velocities with gravity and cage-rotation influence
+        // compute angular velocity vector around Y from cage rotation speed
+        const angularVel = new THREE.Vector3(0, s.rotationSpeed * 0.6, 0);
+        for (let i = 0; i < s.balls.length; i++) {
+          const b = s.balls[i];
+          // apply gravity
+          b.vel.addScaledVector(GRAVITY, FIXED_DT);
+
